@@ -63,12 +63,43 @@ function handleDecimal() {
 function handleOperator(op) {
   const currentValue = parseFloat(state.currentInput);
 
-  if (state.operator && state.previousValue !== null && !state.shouldResetDisplay) {
-    // Chain operations: calculate intermediate result
-    handleEquals();
+  // If we already have an operator and previous value, calculate intermediate result
+  if (state.operator && state.previousValue !== null) {
+    const a = state.previousValue;
+    const b = currentValue;
+    let result;
+
+    try {
+      switch (state.operator) {
+        case '+':
+          result = Calculator.add(a, b);
+          break;
+        case '-':
+          result = Calculator.subtract(a, b);
+          break;
+        case '*':
+          result = Calculator.multiply(a, b);
+          break;
+        case '/':
+          result = Calculator.divide(a, b);
+          break;
+      }
+
+      state.currentInput = String(result);
+      state.previousValue = result;
+      updateDisplay();
+    } catch (error) {
+      state.currentInput = 'Error';
+      state.previousValue = null;
+      state.operator = null;
+      state.shouldResetDisplay = true;
+      updateDisplay();
+      return;
+    }
+  } else {
+    state.previousValue = currentValue;
   }
 
-  state.previousValue = state.operator ? parseFloat(state.currentInput) : currentValue;
   state.operator = op;
   state.shouldResetDisplay = true;
 }
