@@ -1,0 +1,33 @@
+{
+  "generated": "2025-11-09T00:31:31.451Z",
+  "baseURL": "http://localhost:8080",
+  "projectType": "web-app",
+  "screenshots": [
+    {
+      "filename": "hero.png",
+      "path": "docs/screenshots/hero.png",
+      "type": "hero",
+      "description": "Calculator initial view with clean UI"
+    },
+    {
+      "filename": "feature-01-operation.png",
+      "path": "docs/screenshots/feature-01-operation.png",
+      "type": "feature",
+      "description": "Calculator showing operation in progress (5 + 3)"
+    },
+    {
+      "filename": "feature-02-result.png",
+      "path": "docs/screenshots/feature-02-result.png",
+      "type": "feature",
+      "description": "Calculator displaying calculation result"
+    },
+    {
+      "filename": "feature-03-decimal.png",
+      "path": "docs/screenshots/feature-03-decimal.png",
+      "type": "feature",
+      "description": "Calculator handling decimal operations (3.14 × 2)"
+    }
+  ],
+  "total": 4,
+  "failed": 0
+}

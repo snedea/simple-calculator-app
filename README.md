@@ -2,6 +2,8 @@
 
 A clean, responsive web-based calculator application built with vanilla JavaScript.
 
+![Calculator Screenshot](docs/screenshots/hero.png)
+
 ## Features
 
 - ✅ Basic arithmetic operations (addition, subtraction, multiplication, division)
