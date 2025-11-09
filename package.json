@@ -1,0 +1,25 @@
+{
+  "name": "simple-calculator-app",
+  "version": "1.0.0",
+  "description": "A simple, responsive calculator web application",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:e2e": "playwright test",
+    "dev": "http-server -p 8080 -c-1",
+    "start": "http-server -p 8080"
+  },
+  "keywords": [
+    "calculator",
+    "web-app",
+    "javascript"
+  ],
+  "author": "Context Foundry",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "@playwright/test": "^1.40.0",
+    "http-server": "^14.1.1"
+  }
+}
